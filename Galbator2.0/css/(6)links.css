@@ -1,0 +1,395 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Press+Start+2P&family=Russo+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Inter:wght@300&family=Press+Start+2P&display=swap");
+
+* {
+  font-family: "Bakbak One", cursive;
+  user-select: none;
+}
+
+body {
+  width: 100vw;
+  background-image: url(/img/pexels-photo-2387793.jpg);
+  margin: 0;
+}
+
+/* VIDEO */
+
+#background-video {
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+h1,
+h2,
+#btnVideo {
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+h1 {
+  font-size: 75px;
+  border-radius: 15px;
+  width: 100%;
+  color: rgba(0, 255, 157, 0.678);
+  letter-spacing: 10px;
+  margin-top: 0px;
+  padding: 0px;
+}
+
+#btnVideo {
+  font-size: 1.5rem;
+  background: 0;
+  border: 0;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  border-radius: 7px;
+}
+
+/* ----------NAVIGATION---------- */
+
+nav {
+  display: grid;
+  grid-template-columns: 15% 85%;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0px 0 0;
+  width: 100%;
+  position: absolute;
+}
+
+.nav img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 65px;
+  width: 65px;
+  cursor: pointer;
+  border-radius: 50%;
+  margin: 15px 35px;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 0 290px 0 0;
+}
+
+.nav a {
+  text-decoration: none;
+  color: rgb(247, 247, 247);
+  font-size: 17px;
+  background: rgba(1, 1, 1, 0.523);
+  border-radius: 8px;
+  height: 35px;
+  width: 135px;
+  line-height: 35px;
+  text-align: center;
+  box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.678);
+  letter-spacing: 1px;
+}
+
+li {
+  display: flex;
+  margin: 35px 20px;
+}
+
+.nav img {
+  transition: transform 1s;
+}
+
+.nav img:hover {
+  transform: rotate(360deg);
+}
+
+.nav a {
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.nav a:hover {
+  background-color: rgba(0, 255, 157, 0.738);
+  color: rgb(0, 0, 0);
+}
+
+.nav a:active {
+  transform: scale(1.15);
+  transition: 0.5s;
+}
+
+/* LINKS */
+
+.about {
+  bottom: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  transition: all 0.2s ease;
+}
+.about .bg_links {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 100%;
+  backdrop-filter: blur(5px);
+  position: absolute;
+}
+.about .logo {
+  width: 40px;
+  height: 40px;
+  z-index: 9;
+  background-image: url(https://rafaelalucas91.github.io/assets/codepen/logo_white.svg);
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: 10px 7px;
+  opacity: 0.9;
+  transition: all 1s 0.2s ease;
+  bottom: 0;
+  right: 0;
+}
+.about .social {
+  opacity: 0;
+  right: 0;
+  bottom: 0;
+}
+.about .social .icon {
+  width: 100%;
+  height: 100%;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  display: flex;
+  transition: all 0.2s ease, background-color 0.4s ease;
+  opacity: 0;
+  border-radius: 100%;
+}
+.about .social.portfolio {
+  transition: all 0.8s ease;
+}
+.about .social.portfolio .icon {
+  background-image: url(https://rafaelalucas91.github.io/assets/codepen/link.svg);
+}
+.about .social.dribbble {
+  transition: all 0.3s ease;
+}
+.about .social.dribbble .icon {
+  background-image: url(https://rafaelalucas91.github.io/assets/codepen/dribbble.svg);
+}
+.about .social.linkedin {
+  transition: all 0.8s ease;
+}
+.about .social.linkedin .icon {
+  background-image: url(https://rafaelalucas91.github.io/assets/codepen/linkedin.svg);
+}
+.about:hover {
+  width: 105px;
+  height: 105px;
+  transition: all 0.6s cubic-bezier(0.64, 0.01, 0.07, 1.65);
+}
+.about:hover .logo {
+  opacity: 1;
+  transition: all 0.6s ease;
+}
+.about:hover .social {
+  opacity: 1;
+}
+.about:hover .social img {
+  opacity: 0.9;
+}
+.about:hover .social:hover {
+  background-size: 28px;
+}
+.about:hover .social:hover img {
+  background-size: 65%;
+  opacity: 1;
+}
+.about:hover .social.portfolio {
+  right: 0;
+  bottom: calc(100% - 40px);
+  transition: all 0.3s 0s cubic-bezier(0.64, 0.01, 0.07, 1.65);
+}
+.about:hover .social.portfolio img:hover {
+  background-color: #698fb7;
+}
+.about:hover .social.dribbble {
+  bottom: 45%;
+  right: 45%;
+  transition: all 0.3s 0.15s cubic-bezier(0.64, 0.01, 0.07, 1.65);
+}
+.about:hover .social.dribbble img:hover {
+  background-color: #ea4c89;
+}
+.about:hover .social.linkedin {
+  bottom: 0;
+  right: calc(100% - 40px);
+  transition: all 0.3s 0.25s cubic-bezier(0.64, 0.01, 0.07, 1.65);
+}
+.about:hover .social.linkedin img:hover {
+  background-color: #0077b5;
+}
+
+.wrapper {
+  width: 100vw;
+  margin: 0 auto;
+  height: 400px;
+  background-color: #161616;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 767px) {
+  .wrapper {
+    height: 700px;
+  }
+}
+
+.link {
+  display: flex;
+}
+
+.content {
+  width: 1500px;
+  padding: 0 4%;
+  padding-top: 98px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 767px) {
+  .content {
+    padding-top: 300px;
+    flex-direction: column;
+  }
+}
+.card {
+  width: 315px;
+  height: 315px;
+  background-color: #101010ef;
+  margin: 25px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 15px rgba(2, 249, 158, 0.874);
+  font-size: 16px;
+  transition: all 0.5s ease;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+img {
+  margin: 0 auto;
+  width: 130px;
+  height: 130px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  transition: all 0.8s ease;
+  background-position: 0px;
+  background-size: 200px;
+  margin-bottom: 0px;
+}
+
+h2 {
+  font-size: 3rem;
+  color: white;
+  text-shadow: 0px 2px 20px rgba(255, 255, 255, 0.833);
+  margin: 0;
+  padding: 0;
+}
+
+.material-icons.md-18 {
+  font-size: 18px;
+}
+
+.material-icons.md-24 {
+  font-size: 24px;
+}
+
+.material-icons.md-36 {
+  font-size: 36px;
+}
+
+.material-icons.md-48 {
+  font-size: 48px;
+}
+
+.card .title {
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  margin-top: 30px;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+.card .text {
+  width: 80%;
+  margin: 0 auto;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 20px;
+  color: white;
+  font-weight: 200;
+  letter-spacing: 2px;
+  opacity: 0;
+  max-height: 0;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  height: 360px;
+}
+
+.card:hover .info {
+  height: 90%;
+}
+
+.card:hover .text {
+  transition: all 0.3s ease;
+  opacity: 1;
+  max-height: 155px;
+}
+
+.card:hover img {
+  background-position: -120px;
+  transition: all 0.3s ease;
+}
+
+.card img:hover img {
+  background: linear-gradient(90deg, #ff7e7e, #ff4848);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
